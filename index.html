@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Tailwind CSS for styling -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Gotu&family=Rozha+One&display=swap" rel="stylesheet">
+<style>
+    /* Custom Fonts */
+    .font-heading { font-family: 'Rozha One', serif; }
+    .font-body { font-family: 'Gotu', sans-serif; }
+    
+    /* Animation Classes */
+    .fade-section {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s ease-out;
+    }
+    .fade-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Smooth Scroll */
+    html { scroll-behavior: smooth; }
+    
+    /* Hide scrollbar for neatness */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #1c1917; }
+    ::-webkit-scrollbar-thumb { background: #059669; border-radius: 4px; }
+</style>
+</head>
+<body class="bg-stone-900 text-stone-200 font-body overflow-x-hidden">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-emerald-600 z-50 transition-all duration-300" style="width: 0%"></div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-stone-900 via-stone-800 to-stone-900 opacity-50 z-0"></div>
+        <div class="z-10 text-center space-y-6 relative">
+            <div class="fade-section mb-6 inline-block p-4 rounded-full bg-stone-800/50 border border-stone-700">
+                <!-- Wind Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-stone-400 animate-pulse"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+            </div>
+            <div class="fade-section transition delay-200">
+                <h1 class="text-4xl md:text-7xl font-heading text-emerald-100 leading-tight">
+                    वो पेड़ जो<br/> <span class="text-emerald-500">इंतज़ार</span> करता रहा
+                </h1>
+            </div>
+            <div class="fade-section transition delay-500">
+                <p class="text-stone-400 text-lg mt-4">एक कहानी उम्मीद और दोस्ती की...</p>
+            </div>
+            <div class="fade-section transition delay-700">
+                <div class="mt-12 animate-bounce text-stone-500 flex flex-col items-center">
+                    <span class="text-sm">नीचे स्क्रॉल करें</span>
+                    <div class="w-px h-12 bg-gradient-to-b from-stone-500 to-transparent mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Story -->
+    <main class="max-w-3xl mx-auto px-6 py-12 md:py-24 space-y-32">
+
+        <!-- Chapter 1 -->
+        <div class="fade-section text-center space-y-6">
+            <!-- Visual: Full Tree -->
+            <div class="relative w-64 h-64 mx-auto mb-8 flex items-end justify-center">
+                <div class="absolute bottom-0 w-full h-2 bg-stone-600 rounded-full opacity-50"></div>
+                <svg viewBox="0 0 200 200" class="w-64 h-64 text-emerald-800 fill-current absolute bottom-2">
+                    <path d="M100,180 C90,160 90,140 95,120 C70,110 50,90 60,60 C70,30 110,30 120,50 C140,40 160,60 150,90 C160,110 140,130 105,120 C110,140 110,160 100,180 Z" />
+                </svg>
+            </div>
+            <p class="text-xl md:text-2xl leading-relaxed text-stone-300">
+                अपनापुरी गाँव के किनारे एक बहुत पुराना पेड़ था। इतना पुराना कि दादा जी कहते थे — 
+                <br/><span class="text-emerald-300">“जब मैं छोटा था, तब भी ये पेड़ बूढ़ा था।”</span>
+            </p>
+            <p class="text-lg text-stone-400">
+                उस पेड़ का नाम बच्चों ने रखा था — <strong>इंतज़ार वाला पेड़।</strong><br/>
+                क्योंकि वो हर शाम रास्ते की ओर झुक जाता था… जैसे किसी का इंतज़ार करता हो।
+            </p>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="fade-section bg-stone-800/30 p-8 rounded-2xl border border-stone-700/50 backdrop-blur-sm">
+            <h2 class="font-heading text-3xl text-emerald-200 mb-6 text-center">चिंटू और उसकी बातें</h2>
+            <div class="space-y-4 text-lg text-stone-300 leading-relaxed">
+                <p>चिंटू रोज़ स्कूल से लौटते समय वहीं बैठता। उसका बैग भारी था, मन उससे भी भारी।</p>
+                <p class="italic text-stone-400 border-l-2 border-emerald-700 pl-4 my-4">
+                    “सब मुझसे आगे निकल रहे हैं…” उसने मिट्टी कुरेदते हुए कहा।
+                </p>
+                <p>
+                    हवा चली। पेड़ की पत्तियाँ सरसराईं। ऐसा लगा जैसे कोई बूढ़ी आवाज़ फुसफुसाई —
+                    <span class="block text-center text-xl text-emerald-400 mt-2 font-heading">“तू बैठ… मैं सुन रहा हूँ।”</span>
+                </p>
+                <p>चिंटू हँसा। लेकिन उसने बोलना जारी रखा। अपने डर… अपनी शर्म… अपना गुस्सा… सब।</p>
+            </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="fade-section relative py-12 text-center space-y-6">
+            <div class="absolute inset-0 bg-red-900/10 blur-3xl rounded-full -z-10"></div>
+            <h2 class="font-heading text-4xl text-red-200/80 mb-8">सन्नाटा</h2>
+            <!-- Visual: Cut Stump -->
+            <div class="relative w-64 h-64 mx-auto mb-8 flex items-end justify-center">
+                <div class="absolute bottom-0 w-full h-2 bg-stone-600 rounded-full opacity-50"></div>
+                <svg viewBox="0 0 100 50" class="w-32 h-16 text-stone-700 fill-current absolute bottom-2">
+                    <path d="M10,50 L20,10 L80,10 L90,50 Z" />
+                    <ellipse cx="50" cy="10" rx="30" ry="5" class="fill-stone-600" />
+                </svg>
+            </div>
+            <p class="text-xl text-stone-300">
+                एक दिन गाँव में खबर फैली। सड़क चौड़ी होगी। पेड़ काटा जाएगा।
+                चिंटू भागा, तने से लिपट गया।
+            </p>
+            <p class="text-lg text-red-200 italic">“तू जाएगा तो मैं किससे बात करूँगा?”</p>
+            <p class="text-lg text-stone-400">
+                अगले दिन मजदूर आए। आरी चली।<br/>
+                हर कट के साथ चिंटू को लगा जैसे उसके अंदर कुछ टूट रहा हो।
+            </p>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="fade-section text-center space-y-4 max-w-lg mx-auto">
+            <p class="text-lg text-stone-500">
+                गाँव वाले आगे बढ़ गए। चिंटू वहीं बैठा रहा।<br/>
+                कुछ दिनों बाद… वही जगह खाली थी। धूप सीधी पड़ती थी। अजीब सन्नाटा था।
+            </p>
+            <div class="w-16 h-1 bg-stone-700 mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Chapter 5: Interactive Game -->
+        <div class="fade-section bg-gradient-to-b from-stone-800 to-stone-900 p-1 rounded-3xl shadow-2xl shadow-emerald-900/20">
+            <div class="bg-stone-900 rounded-[22px] p-8 md:p-12 text-center space-y-8" id="game-container">
+                
+                <!-- Game Active State -->
+                <div id="game-active">
+                    <h2 class="font-heading text-3xl text-emerald-100">एक नई शुरुआत</h2>
+                    <p class="text-lg text-stone-300 mt-4">
+                        एक सुबह उसने देखा — कटे हुए तने के बगल से एक नन्हा हरा अंकुर झाँक रहा था।
+                    </p>
+                    
+                    <!-- Dynamic Tree Visual -->
+                    <div class="relative w-64 h-64 mx-auto my-8 flex items-end justify-center">
+                        <div class="absolute bottom-0 w-full h-2 bg-stone-600 rounded-full opacity-50"></div>
+                        <!-- Stump -->
+                        <svg viewBox="0 0 100 50" class="w-32 h-16 text-stone-700 fill-current absolute bottom-2">
+                            <path d="M10,50 L20,10 L80,10 L90,50 Z" />
+                            <ellipse cx="50" cy="10" rx="30" ry="5" class="fill-stone-600" />
+                        </svg>
+                        <!-- Sprout (Small) -->
+                        <div id="sprout-small" class="absolute bottom-6 left-1/2 -ml-3 origin-bottom transition-all duration-1000 opacity-100 scale-100">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-emerald-400"><path d="M2 22h20"/><path d="M12 22v-9"/><path d="M9 10a5 5 0 0 1 5 5v7"/><path d="M15 10a5 5 0 0 0-5 5v7"/></svg>
+                        </div>
+                        <!-- Sprout (Big/Growing) -->
+                        <div id="sprout-big" class="absolute bottom-6 left-1/2 -ml-3 origin-bottom transition-all duration-1000 opacity-0 scale-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" class="text-emerald-400"><path d="M7 19a5 5 0 0 1 5-5v5"/><path d="M12 14a5 5 0 0 1 5 5v5"/><path d="M12 14V3"/><path d="M12 3a5 5 0 0 0-5 5"/><path d="M12 3a5 5 0 0 1 5 5"/><path d="M12 22h-5"/><path d="M17 22h-5"/></svg>
+                        </div>
+                    </div>
+
+                    <p class="text-emerald-200/80 italic">"अब मेरी बारी है। तू सुनता था… अब मैं संभालूँगा।"</p>
+
+                    <div class="pt-6 border-t border-stone-800 mt-6">
+                        <p class="text-sm text-stone-500 mb-4 uppercase tracking-widest">कहानी पूरी करने के लिए पानी दें</p>
+                        <button id="water-btn" class="group relative inline-flex items-center justify-center px-8 py-3 bg-emerald-700 hover:bg-emerald-600 text-white rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emerald-900/50 cursor-pointer">
+                            <span class="mr-2">💧</span>
+                            <span id="btn-text">पानी डालें</span>
+                        </button>
+                        <div class="mt-4 h-2 w-48 bg-stone-800 rounded-full mx-auto overflow-hidden">
+                            <div id="water-progress" class="h-full bg-emerald-500 transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Finished State (Hidden Initially) -->
+                <div id="game-finished" class="hidden py-8 animate-pulse">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-emerald-500/20 p-4 rounded-full">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" class="text-emerald-500"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        </div>
+                    </div>
+                    <h2 class="font-heading text-4xl text-emerald-400 mb-4">जीवन चलता रहता है</h2>
+                    <p class="text-xl text-stone-300 max-w-md mx-auto">
+                        उस दिन पहली बार चिंटू ने समझा —<br/>
+                        कुछ चीज़ें खत्म नहीं होतीं।<br/>
+                        वो बस रूप बदलती हैं…<br/>
+                        और इंतज़ार करती हैं कि हम उन्हें पहचान लें।
+                    </p>
+                    <button onclick="location.reload()" class="mt-12 text-stone-500 hover:text-emerald-400 transition-colors flex items-center mx-auto gap-2 text-sm cursor-pointer">
+                        🔄 फिर से पढ़ें
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-12 text-stone-600 text-sm border-t border-stone-800 mt-12">
+        <p>एक छोटी सी कहानी, एक बड़ी उम्मीद।</p>
+        <p class="mt-2 text-xs opacity-50">© Apna Toon Blog</p>
+    </footer>
+
+    <!-- LOGIC SCRIPT -->
+    <script>
+        // 1. Scroll Progress Bar Logic
+        window.addEventListener('scroll', () => {
+            const totalScroll = document.documentElement.scrollTop;
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scroll = totalScroll / windowHeight;
+            document.getElementById('scroll-progress').style.width = `${scroll * 100}%`;
+        });
+
+        // 2. Fade In Animation Logic
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // 3. Watering Game Logic
+        let waterCount = 0;
+        const maxWater = 5;
+        const waterBtn = document.getElementById('water-btn');
+        const waterProgress = document.getElementById('water-progress');
+        const btnText = document.getElementById('btn-text');
+        const sproutSmall = document.getElementById('sprout-small');
+        const sproutBig = document.getElementById('sprout-big');
+        const gameActive = document.getElementById('game-active');
+        const gameFinished = document.getElementById('game-finished');
+
+        waterBtn.addEventListener('click', () => {
+            if (waterCount < maxWater) {
+                waterCount++;
+                
+                // Update Progress Bar
+                waterProgress.style.width = `${(waterCount / maxWater) * 100}%`;
+                
+                // Update Text
+                if (waterCount < maxWater) {
+                    btnText.innerText = "और पानी दें...";
+                } else {
+                    btnText.innerText = "पूरा हुआ!";
+                }
+
+                // Grow Tree Visual
+                if (waterCount > 2) {
+                    sproutSmall.style.opacity = '0';
+                    sproutSmall.style.transform = 'scale(0)';
+                    sproutBig.style.opacity = '1';
+                    sproutBig.style.transform = 'scale(2.5) translateY(-5px)';
+                }
+
+                // Check Finish
+                if (waterCount === maxWater) {
+                    setTimeout(() => {
+                        gameActive.classList.add('hidden');
+                        gameFinished.classList.remove('hidden');
+                        gameFinished.classList.add('block');
+                    }, 1000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+  
